@@ -5,3 +5,4 @@ wheel
 tomli
 pip>=22.2.2
 iperf3~=0.1.11
+rich

@@ -50,6 +50,17 @@ Once all the base bindings are installed then you can proceed to install from Py
 pip install linktester
 ```
 
+# Developers
+
+If you want to contribute features you can do this:
+
+```shell
+python3 -m virtualenv $HOME/virtualenv/linktester
+. $HOME/virtualenv/linktester/bin/activate
+git clone git@github.com:josevnz/linktester.git
+python setup.py develop
+```
+
 # Bugs
 
 Please report any bugs on the official linktester page

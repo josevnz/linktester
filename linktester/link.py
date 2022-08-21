@@ -9,6 +9,8 @@ from linktester import LinkError
 from linktester.validation import ethtool as ethtool_cmd, ip
 
 LOCALHOST = '127.0.0.1'
+DEFAULT_IPERF_PORT = 5201
+DEFAULT_DURATION = 120
 
 
 class InterfaceLister:
@@ -114,7 +116,7 @@ class Server:
             self,
             *,
             verbose: bool = False,
-            port: int = 5201,
+            port: int = DEFAULT_IPERF_PORT,
             bind_address: str = LOCALHOST,
             forever: bool = False
     ):
@@ -146,16 +148,17 @@ class Client:
     def __init__(
             self,
             *,
-            duration: int = 120,
+            duration: int = DEFAULT_DURATION,
             verbose: bool = False,
             reverse: bool = False,
-            port: int = 5201,
-            bind_address: str = LOCALHOST,
+            port: int = DEFAULT_IPERF_PORT,
+            bind_address: str = None,
             server_hostname: str = LOCALHOST
     ):
         client = iperf3.Client()
         client.duration = 1
-        client.bind_address = bind_address
+        if bind_address:
+            client.bind_address = bind_address
         client.server_hostname = server_hostname
         client.duration = duration
         client.port = port
@@ -167,11 +170,12 @@ class Client:
         self.server_hostname = server_hostname
         self.bind_address = bind_address
         self.duration = duration
+        self.port = port
 
     def start(self) -> TestResult:
         results = self.client.run()
         if results.error:
-            raise LinkError(results.error)
+            raise LinkError(f"{self.server_hostname}:{self.port}, bind_address (override):{self.bind_address}, results.error")
         if self.verbose:
             logging.info(results)
         return results
