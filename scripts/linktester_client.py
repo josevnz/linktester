@@ -39,6 +39,7 @@ if __name__ == "__main__":
     PARSER.add_argument(
         '--duration',
         action='store',
+        type=int,
         default=DEFAULT_DURATION,
         help=f"Default duration of the test. Default=({DEFAULT_DURATION} seconds"
     )
@@ -57,7 +58,7 @@ if __name__ == "__main__":
     )
 
     ARGS = PARSER.parse_args()
-    with console.pager():
+    with console:
         client = Client(
             verbose=ARGS.verbose,
             duration=ARGS.duration,
@@ -79,4 +80,5 @@ if __name__ == "__main__":
         if len(cmp_results) > 0:
             console.print(f"The following counters had problems: {cmp_results}")
             sys.exit(100)
+    console.print("No issues detected ...")
     sys.exit(0)

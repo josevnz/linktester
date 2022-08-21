@@ -10,7 +10,7 @@ from linktester.validation import ethtool as ethtool_cmd, ip
 
 LOCALHOST = '127.0.0.1'
 DEFAULT_IPERF_PORT = 5201
-DEFAULT_DURATION = 120
+DEFAULT_DURATION = 60
 
 
 class InterfaceLister:
