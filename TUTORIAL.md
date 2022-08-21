@@ -267,6 +267,10 @@ running.
 
 Please check out [the repository](https://github.com/josevnz/linktester) and run the script, you will be amazed how easy is to automate a few tasks with Python.
 
+Instead, let's see it in action:
+
+[![asciicast](https://asciinema.org/a/516305.svg)](https://asciinema.org/a/516305)
+
 # What you can do next?
 
 Learning never stops, so here are a few pointers and observations to keep you going:
