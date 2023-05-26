@@ -42,7 +42,7 @@ python3 -m virtualenv $HOME/virtualenv/linktester
 
 For the rest of the installation instructions I will assume you have activated your virtual environment as explained above.
 
-# Installation
+## Installation
 
 Once all the base bindings are installed then you can proceed to install from Pypi.org:
 
@@ -50,7 +50,7 @@ Once all the base bindings are installed then you can proceed to install from Py
 pip install linktester
 ```
 
-# Developers
+## Developers
 
 If you want to contribute features you can do this:
 
@@ -61,6 +61,10 @@ git clone git@github.com:josevnz/linktester.git
 python setup.py develop
 ```
 
-# Bugs
+## Bugs
 
 Please report any bugs on the official linktester page
+
+## Tutorial
+
+[Here is a tutorial that comes with the code](TUTORIAL.md)
