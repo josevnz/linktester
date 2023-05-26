@@ -1,5 +1,7 @@
 # What is linktester?
 
+[![Downloads](https://pepy.tech/badge/linktester)](https://pepy.tech/project/linktester)
+
 linktester is a small link test application that uses iperf3 and ethtool to look for errors, problems on
 a network link. You could use it for example to test a new physical connection between a new card you installed
 on a server and an existing machine.
