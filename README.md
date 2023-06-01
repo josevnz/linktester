@@ -1,5 +1,7 @@
 # What is linktester?
 
+![](mazinger-z.png)
+
 [![Downloads](https://pepy.tech/badge/linktester)](https://pepy.tech/project/linktester)
 
 linktester is a small link test application that uses iperf3 and ethtool to look for errors, problems on
