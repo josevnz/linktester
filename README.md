@@ -1,5 +1,5 @@
 # What is linktester?
-
+[![Downloads](https://static.pepy.tech/badge/linktester)](https://pepy.tech/project/linktester)
 ![](mazinger-z.png)
 
 [![Downloads](https://pepy.tech/badge/linktester)](https://pepy.tech/project/linktester)
